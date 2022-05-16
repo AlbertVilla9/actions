@@ -1,16 +1,19 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "lint": "eslint . --ext js,jsx,ts,tsx --fix",
-        "npm_lint": "npm run eslint && npm run stylelint",
-        "yarn_lint": "yarn run eslint && yarn run stylelint"
+        "dev": "webpack-dev-server --open --mode development",
+        "start-test": "NODE_ENV=test node app.js",
+        "start": "node app.js",
+        "test": "jest",
+        "eslint": "eslint './**/*.{js,jsx}'",
+        "build": "webpack --mode production",
+        "test:e2e": "npx cypress run"
 
     },
     "devDependencies": {
