@@ -8,7 +8,9 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "lint": "eslint . --ext js,jsx,ts,tsx --fix"
+        "lint": "eslint . --ext js,jsx,ts,tsx --fix",
+        "npm_lint": "npm run eslint && npm run stylelint",
+        "yarn_lint": "yarn run eslint && yarn run stylelint"
 
     },
     "devDependencies": {
